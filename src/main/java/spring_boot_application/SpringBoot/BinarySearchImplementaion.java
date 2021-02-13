@@ -1,10 +1,22 @@
 package spring_boot_application.SpringBoot;
 
+import interfaces.SortingAlgorithm;
+
 public class BinarySearchImplementaion {
 	
-	public int binarySearch(int [] a, int b){
-		System.out.println("whatever is given as an input we'll return 0");
-		return 0;
+	SortingAlgorithm sortAlgorithm;
+	
+	public BinarySearchImplementaion(SortingAlgorithm sortAlgorithm){
+		super();
+		this.sortAlgorithm = sortAlgorithm;
 	}
 	
+	public int binarySearch(int [] a, int b){
+		
+		int sortedNUmbers [] = sortAlgorithm.sort(a);
+		
+		//Binary search algorithm
+		
+		return 0;
+	}
 }

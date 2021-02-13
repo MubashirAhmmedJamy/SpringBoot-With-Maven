@@ -7,9 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		//pringApplication.run(Application.class, args);
 		
-		System.out.println("This is my first Spring Boot Application");
+		int a [] = {1,4,2};
+		
+		BinarySearchImplementaion bs = new BinarySearchImplementaion(new BubbleSort());
+		
+		int result = bs.binarySearch(a, 3);
+		
+		System.out.println("Found 3 at index = "+ result);
 	}
 
 }
