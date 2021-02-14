@@ -1,9 +1,15 @@
 package spring_boot_application.SpringBoot;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import interfaces.SortingAlgorithm;
 
+
+@Component
 public class BinarySearchImplementaion {
 	
+	@Autowired
 	SortingAlgorithm sortAlgorithm;
 	
 	public BinarySearchImplementaion(SortingAlgorithm sortAlgorithm){
@@ -13,7 +19,7 @@ public class BinarySearchImplementaion {
 	
 	public int binarySearch(int [] a, int b){
 		
-		int sortedNUmbers [] = sortAlgorithm.sort(a);
+		sortAlgorithm.sort(a);
 		
 		//Binary search algorithm
 		
